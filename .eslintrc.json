@@ -1,0 +1,38 @@
+{
+    "env": {
+        "node": true,
+        "mocha": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "warn",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "no-console": [
+            "off"
+        ],
+        "eqeqeq": [
+            "error",
+            "always"
+        ]
+    }
+}

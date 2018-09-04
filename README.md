@@ -4,26 +4,55 @@
   </a>
 </p>
 
-## Challenge for Backend Developer
+## Challenge for Developer
 
-A customer needs to search in our orderbook (available in this <a href="https://github.com/Bitcoin-Banco-Cryptocurrency/Challenge-OneDay/blob/master/OrderBook.json">JSON</a>) and he wants to buy offers below some price also sell offer offer to recieve some money.
-Based on this you will need to develop:
+To run this API, follow the following instructions:
 
-- a simple API to search offers in the .json available;
-- it should be possible to search for offer by their amount (one or more);
-- it must be possible to order the result by price (asc and desc);
+* You need Node v8 installed.
+* There is no need to run `npm install` yet, because the project has *no dependencies*
+* Run the command `npm start`
+* The server should start on port configured by the enviroment variable `PORT`, or `8080`.
 
-The test should be done in Ruby, Go, Python or Node and we do like if you avoid frameworks. We expect at the end of the test, outside the API running, the following items:
+## Commands
 
-- an explanation of what is needed to make your project work;
-- an explanation of how to perform the tests;
+The API has a two endpoints, `bids` and `asks`, and both only accepts the verb `GET`.
 
-Remember that at the time of the evaluation we will look at:
+All parameters must be encoded in the URL, folowing the following schema:
 
-- Code organization;
-- Object-Oriented Principles;
-- Maintenance;
 
-To send us your code, you must:
+## Bid 
 
-Make a fork of this repository, and send us a pull-request.
+### Path: `/bids`
+
+Parameter|Value|Description
+----|----|----
+|bid| Array\<number\> | Filters only bids containing these ammounts
+|sort| "asc" or "desc"| Orders by price
+
+## Ask
+
+### Path: `/asks`
+
+Parameter|Value|Description
+----|----|----
+|ask| Array\<number\> | Filters only bids containing these ammounts
+|Sort| "asc" or "desc"| Orders by price
+
+
+## Examples:
+* `http://localhost:8080/bids?bid=2.208832&bid=0.009&bid=0.16966000&sort=asc` - Searches all Bids with ammount equal to 2.208832 or 0.009 or 0.16966000
+* `http://localhost:8080/asks?ask=2.208832&ask=0.009&ask=0.00107197&sort=desc` - The same as above, but searches Asks 
+
+## Testing
+* To test, run the command `npm install`
+* Then run the command `npm test`
+
+## Notes
+* There are no dependencies to the project, therefore it is only using vanilla Node.js
+* The test coverage is 100%
+ 
+<p align="center">
+  <a href="https://www.btc-banco.com">
+      <img src="" alt="Coverage"/>
+  </a>
+</p>
