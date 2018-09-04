@@ -50,9 +50,9 @@ Parameter|Value|Description
 ## Notes
 * There are no dependencies to the project, therefore it is only using vanilla Node.js
 * The test coverage is 100%
- 
+
 <p align="center">
-  <a href="https://www.btc-banco.com">
-      <img src="" alt="Coverage"/>
+  <a href="https://raw.githubusercontent.com/thiagopromano/Challenge-OneDay/master/testResults.PNG">
+      <img src="https://raw.githubusercontent.com/thiagopromano/Challenge-OneDay/master/testResults.PNG" alt="Coverage"/>
   </a>
 </p>
