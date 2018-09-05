@@ -1,29 +1,31 @@
-<p align="center">
-  <a href="https://www.btc-banco.com">
-      <img src="https://s3.amazonaws.com/assinaturas-de-emails/btc.png" alt="Grupo Bitcoin Banco"/>
-  </a>
-</p>
+## About the project
+This is a RESTful API made in Node Express only to consume data. You can run the project and consume the API from the browser, Postman, etc.
 
-## Challenge for Backend Developer
+## Running the project
+Install Node 8 or higher. After installing it, run the following commands in terminal inside the project's root folder:
+```
+npm install # 1. install the dependencies
+npm run start # 2. run the project
+```
+The project will run on port 5000.
 
-A customer needs to search in our orderbook (available in this <a href="https://github.com/Bitcoin-Banco-Cryptocurrency/Challenge-OneDay/blob/master/OrderBook.json">JSON</a>) and he wants to buy offers below some price also sell offer offer to recieve some money.
-Based on this you will need to develop:
+## API Documentation
+`asks` endpoint:
+* to list `asks`
+```
+GET /api/offers/asks
+```
 
-- a simple API to search offers in the .json available;
-- it should be possible to search for offer by their amount (one or more);
-- it must be possible to order the result by price (asc and desc);
+`bids` endpoint:
+* to list `bids`
+```
+GET /api/offers/bids
+```
 
-The test should be done in Ruby, Go, Python or Node and we do like if you avoid frameworks. We expect at the end of the test, outside the API running, the following items:
-
-- an explanation of what is needed to make your project work;
-- an explanation of how to perform the tests;
-
-Remember that at the time of the evaluation we will look at:
-
-- Code organization;
-- Object-Oriented Principles;
-- Maintenance;
-
-To send us your code, you must:
-
-Make a fork of this repository, and send us a pull-request.
+to filter data by `order_price` and/or `amount` in any endpoint:
+```
+GET /api/offers/asks?order_price=asc
+GET /api/offers/bids?order_price=desc
+GET /api/offers/asks?amount=0.5
+GET /api/offers/bids?order_price=desc&amount=0.5
+```
