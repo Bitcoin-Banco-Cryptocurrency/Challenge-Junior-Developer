@@ -1,0 +1,15 @@
+{
+    "name": "Challenge-OneDay",
+    "version": "1.0.0",
+    "description": "Test for Backend Developer at Bitcoin Banco",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "start": "node index.js "
+    },
+    "author": "Jhonathan",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^23.6.0"
+    }
+}
