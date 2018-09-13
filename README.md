@@ -4,17 +4,17 @@
   </a>
 </p>
 
-## Challenge for Backend Developer
+##Challenge for Backend Developer
 
 This project was tested with node v8.11.4.
 
-##Configurating and running
+**Configurating and running**
 
 - Install node js v8.11.4 or above, you can find it <a href="https://nodejs.org/en/">here</a>
 - To enable tests, run `npm install`
 - To run the API, run `npm start`
 
-##Endpoints
+**Endpoints**
 
 This API has two endpoints, one search for bids and the other search for asks
 
@@ -70,7 +70,7 @@ This API has two endpoints, one search for bids and the other search for asks
   * **Code:** 200 <br />
     **Content:** An array with the matches results
 
-##Examples
+**Examples**
 
   ##### Asks 
   * `http://localhost:3000/asks/search-by-amount?amount=0.63322053&amount=0.5&order=asc`
