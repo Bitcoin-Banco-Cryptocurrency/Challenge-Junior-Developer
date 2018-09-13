@@ -6,7 +6,7 @@
 
 ## Challenge for Backend Developer
 
-This project was tested with node v8.11.4.
+This project is a simple API to search offers
 
 ## Configurating and running
 
@@ -72,14 +72,14 @@ This API has two endpoints, one search for bids and the other search for asks
 
 ## Examples
 
-  ##### Asks 
+  #### Asks 
   * `http://localhost:3000/asks/search-by-amount?amount=0.63322053&amount=0.5&order=asc`
     - Returns: "[[45300,0.63322053],[46499,0.5],[47880,0.5],[49950,0.5],[59900.5,0.5],[65309.02,0.5],[70010,0.5],[76015,0.5]]"
 
   * `http://localhost:3000/asks/search-by-amount?amount=0.63322053&amount=0.5&order=desc`
     - Returns: "[[76015,0.5],[70010,0.5],[65309.02,0.5],[59900.5,0.5],[49950,0.5],[47880,0.5],[46499,0.5],[45300,0.63322053]]"
 
-  ##### Bids
+  #### Bids
    * `http://localhost:3000/bids/search-by-amount?amount=0.63322053&amount=0.5`
      - Returns: "[[704,0.5],[37001,0.5]]"
 
