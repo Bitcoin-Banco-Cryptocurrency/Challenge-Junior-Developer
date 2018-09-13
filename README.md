@@ -1,4 +1,4 @@
-<p align="center">
+  <p align="center">
   <a href="https://www.btc-banco.com">
       <img src="https://s3.amazonaws.com/assinaturas-de-emails/btc.png" alt="Grupo Bitcoin Banco"/>
   </a>
@@ -6,24 +6,91 @@
 
 ## Challenge for Backend Developer
 
-A customer needs to search in our orderbook (available in this <a href="https://github.com/Bitcoin-Banco-Cryptocurrency/Challenge-OneDay/blob/master/OrderBook.json">JSON</a>) and he wants to buy offers below some price also sell offer offer to recieve some money.
-Based on this you will need to develop:
+This project was tested with node v8.11.4.
 
-- a simple API to search offers in the .json available;
-- it should be possible to search for offer by their amount (one or more);
-- it must be possible to order the result by price (asc and desc);
+### Configurating and running
 
-The test should be done in Ruby, Go, Python or Node and we do like if you avoid frameworks. We expect at the end of the test, outside the API running, the following items:
+- Install node js v8.11.4 or above, you can find it <a href="https://nodejs.org/en/">here</a>
+- To enable tests, run `npm install`
+- To run the API, run `npm start`
 
-- an explanation of what is needed to make your project work;
-- an explanation of how to perform the tests;
+###Endpoints
 
-Remember that at the time of the evaluation we will look at:
+This API has two endpoints, one search for bids and the other search for asks
 
-- Code organization;
-- Object-Oriented Principles;
-- Maintenance;
+#### BIDS
 
-To send us your code, you must:
+  * **URL**
 
-Make a fork of this repository, and send us a pull-request.
+  /bids/search-by-amount?&amount&order
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+   `amount=[number]` (One or more)
+
+   **Optional:**
+ 
+   `order=[string]` ('asc' or 'desc', default is 'asc')
+
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** An array with the matches results
+
+#### ASKS
+
+  * **URL**
+
+  /asks/search-by-amount?&amount&order
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+   `amount=[number]` (One or more)
+
+   **Optional:**
+ 
+   `order=[string]` ('asc' or 'desc', default is 'asc')
+
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** An array with the matches results
+
+###Examples
+
+  ##### Asks 
+  * `http://localhost:3000/asks/search-by-amount?amount=0.63322053&amount=0.5&order=asc`
+    - Returns: "[[45300,0.63322053],[46499,0.5],[47880,0.5],[49950,0.5],[59900.5,0.5],[65309.02,0.5],[70010,0.5],[76015,0.5]]"
+
+  * `http://localhost:3000/asks/search-by-amount?amount=0.63322053&amount=0.5&order=desc`
+    - Returns: "[[76015,0.5],[70010,0.5],[65309.02,0.5],[59900.5,0.5],[49950,0.5],[47880,0.5],[46499,0.5],[45300,0.63322053]]"
+
+  ##### Bids
+   * `http://localhost:3000/bids/search-by-amount?amount=0.63322053&amount=0.5`
+    - Returns: "[[704,0.5],[37001,0.5]]"
+
+  * `http://localhost:3000/bids/search-by-amount?amount=0.5&amount=0.42444000&order=asc`
+    - Returns: "[[704,0.5],[37001,0.5],[45000,0.42444]]"
+    
+
+### Running tests
+
+Run `npm test` to execute the tests via <a href="https://jestjs.io/">[Jest]</a>
+
+- You can find the test files in src/tests
+
+
