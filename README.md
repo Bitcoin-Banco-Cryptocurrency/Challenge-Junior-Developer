@@ -50,6 +50,7 @@ EXEMPLO DE UTILIZAÇÃO:
 - Pesquisa de ordem no preço de quem está comprando: <b> http://localhost:8000/api/Bid/GetPrice?Price=45000&OrderBy=asc </b>
 
 CONTATO:
-Autor : Lucas Pires
-Email : lucasrp.lp@gmail.com 
-Tel   : (41) 99569-0719
+
+- Autor : Lucas Pires
+- Email : lucasrp.lp@gmail.com 
+- Tel   : (41) 99569-0719
