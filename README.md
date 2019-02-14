@@ -1,29 +1,37 @@
-<p align="center">
-  <a href="https://www.btc-banco.com">
-      <img src="https://s3.amazonaws.com/assinaturas-de-emails/btc.png" alt="Grupo Bitcoin Banco"/>
-  </a>
-</p>
+# Rodando o projeto
+npm start
 
-## Challenge for Developer
+# Rodando em modo DEV
+npm i -g nodemon
+npm run dev
 
-A customer needs to search in our orderbook (available in this <a href="https://github.com/Bitcoin-Banco-Cryptocurrency/Challenge-OneDay/blob/master/OrderBook.json">JSON</a>) and he wants to buy offers below some price also sell offer offer to recieve some money.
-Based on this you will need to develop:
+# Resumo
+Acabei que não consegui atuar e nem implementar tudo o que gostaria
+neste projeto, pelo tempo que tenho, estou envolvido em um projeto com o prazo de entrega para a próxima semana para a Porto Seguros.
 
-- a simple API to search offers in the .json available;
-- it should be possible to search for offer by their amount (one or more);
-- it must be possible to order the result by price (asc and desc);
+Segue um resumo das minhas skills:
 
-The test should be done in Ruby, Go, Python or Node and we do like if you avoid frameworks. We expect at the end of the test, outside the API running, the following items:
+Angular 1 e 2 em diante / Angular com redux
+React / Redux / mobx / redux-saga, rxjs
+VueJS / Redux
+NodeJS / Express
+Java / Spring boot / EJB
+PHP / Laravel / Zend framework 2
+Earlang/Elixir
+HTMl/CSS
+Scrum
+Oracle / Mysql / Sql Server
+AWS / EC2 / S3 / Cloudfront / Lambda functions
+Firebase
+Flutter / IONIC 2 / React Native
 
-- an explanation of what is needed to make your project work;
-- an explanation of how to perform the tests;
+Atualmente estou ocupando a posição de Desenvolvedor Fullstack Senior na Livetouch, tenho mais de 8 anos de experência e sempre busco aprender os conceitos de qualquer linguagem e as melhores práticas, tenho em mente que se eu absorver os conceitos e as melhores práticas de cada arquitetura e implementação vou ter as habilidades necessárias para implementar de forma correta e fácil. Claro como todo dev ainda tenho muito o que aprender, porém acredito que meu conhecimento será de grande ajuda para qualquer equipe que deseje um desenvolvedor disposto a lutar pelo melhor e pelo bem da empresa.
 
-Remember that at the time of the evaluation we will look at:
 
-- Code organization;
-- Object-Oriented Principles;
-- Maintenance;
+Utilizei NODEJS no exemplo por ser Javascript que é uma tecnologia na qual tenho pleno dominio, como a ideia era me testar acabei não utilizando nenhuma lib externa, apesar de que se fosse um projeto real, estaria utilizando: express, jwt, etc...
 
-To send us your code, you must:
+Esper que gostem e que esteja do agrado de toda a equipe.
 
-Make a fork of this repository, and send us a pull-request.
+Obrigado pela oportunidade, se possível poderiam me dar algum feedback mesmo negativo, gostaria continuar evoluindo como desenvolvedor e me esforçando cada vez mais para melhorar minhas skills.
+
+Abs...
