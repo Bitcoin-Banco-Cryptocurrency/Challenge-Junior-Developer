@@ -41,7 +41,7 @@ To test the API, you must set values of amount (ex: 0.5) and/or price (asc or de
 
 Example: 
 
-http://localhost:8080/api/asks?amount=0.5
-http://localhost:8080/api/asks?amount=0.5&amount=0.63322053&amount=1&price=desc
-http://localhost:8080/api/bids?amount=1&price=desc
-http://localhost:8080/api/bids?amount=0.5&amount=1&price=desc
+http://localhost:8080/api/asks?amount=0.5 <br>
+http://localhost:8080/api/asks?amount=0.5&amount=0.63322053&amount=1&price=desc <br>
+http://localhost:8080/api/bids?amount=1&price=desc <br>
+http://localhost:8080/api/bids?amount=0.5&amount=1&price=desc <br>
