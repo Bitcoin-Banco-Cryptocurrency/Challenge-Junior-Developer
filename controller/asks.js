@@ -3,14 +3,22 @@ exports.getAsks = (req, res) => {
     let rawData = fs.readFileSync('./db/OrderBook.json');
     let orderBook = JSON.parse(rawData);
     let responseFilter = new Array();
+    let amountReq = new Array();
 
+    
     //amount filter
-    let arryAmount;
+    let arrayAmount;
     const amount = req.query.amount;
     if (amount) {
-        for (var i = 0; i < amount.length; i++) {
-            arryAmount = orderBook.asks.filter((value) => {
-                if (value[1] == amount[i]) {
+        if(!Array.isArray(req.query.amount)){
+            amountReq.push(req.query.amount); //one amount param
+        }else{
+            amountReq = req.query.amount; //n amounts params
+        }
+
+        for (var i = 0; i < amountReq.length; i++) {
+            arrayAmount = orderBook.asks.filter((value) => {
+                if (value[1] == amountReq[i]) {
                     responseFilter.push(value);
                 }
             });
