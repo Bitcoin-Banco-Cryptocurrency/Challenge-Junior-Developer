@@ -1,4 +1,5 @@
 ﻿
+
 # OrderBook API
 
 For this project, a simple API was developed to consult an orderbook. If desired the client can filter by ordering (ASC / DESC) and by amount or by amount list
@@ -73,24 +74,25 @@ https://www.getpostman.com/collections/d1619df9925b886335ca
 > 
     7) Get OrderBook filtering by N amount & orderBy DESC
         [POST] ~ api/orderbook?orderBy=DESC
-                HEADERS: Content-Type: application/json
-                DATA: [0.63322053, 0.36389000, 1.16911000]
+            HEADERS: Content-Type: application/json
+            DATA: [0.63322053, 0.36389000, 1.16911000]
 
 ### C# Project - Main files worked
-> Data/OrderBook.json
-> Model/Order.cs
-> Model/OrdeBook.cs
-> Model/OrderType.cs
-> Model/ResponseObj.cs
-> Controllers/OrderBookController.cs
-> Operations/OrderBookOperations.cs
-> Util/HttpResponseUtil.cs
+> Data/OrderBook.json.
+> Model/Order.cs.
+> Model/OrdeBook.cs.
+> Model/OrderType.cs.
+> Model/ResponseObj.cs.
+> Controllers/OrderBookController.cs.
+> Operations/OrderBookOperations.cs.
+> Util/HttpResponseUtil.cs.
 
 * Other files is for configuration of C# / .NET
 ### Contact
-LinkedIn: https://www.linkedin.com/in/reenan-campos/
-Email: reenan.campos@gmail.com
+LinkedIn: https://www.linkedin.com/in/reenan-campos/.
+Email: reenan.campos@gmail.com.
 
 
 
 # Thanks for visit !
+
