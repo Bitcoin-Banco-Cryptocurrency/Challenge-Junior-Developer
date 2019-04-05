@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 ___
 ### Prerequisites
 
-``` javascript
+``` java
 - Windows Environment (not tested on Linux)
 - Visual Studio Community 2019 (16.0.0)
 - .NET Framework 4.7.2
@@ -18,7 +18,7 @@ ___
 ```
 ___
 ### How make project work ?
-```javascript
+```java
 1. Import/Clone project inside Visual Studio 2019.
 2. Run project with F5 or click in "Run" button on the top of the IDE.
 3. Wait open an page in your browser. (Keep open to project work !)
@@ -35,7 +35,7 @@ https://www.getpostman.com/collections/d1619df9925b886335ca
 **OR**
 
 ##### ● Manual Test (with running project)
-**Localhost basepath: ==localhost:53376/==**
+**Localhost basepath:  localhost:53376/**
 >
     1) Get OrderBook without filter
         [POST] ~ api/orderbook
@@ -78,19 +78,19 @@ https://www.getpostman.com/collections/d1619df9925b886335ca
             DATA: [0.63322053, 0.36389000, 1.16911000]
 
 ### C# Project - Main files worked
-> Data/OrderBook.json.
-> Model/Order.cs.
-> Model/OrdeBook.cs.
-> Model/OrderType.cs.
-> Model/ResponseObj.cs.
-> Controllers/OrderBookController.cs.
-> Operations/OrderBookOperations.cs.
-> Util/HttpResponseUtil.cs.
++ Data/OrderBook.json.
++ Model/Order.cs.
++ Model/OrdeBook.cs.
++ Model/OrderType.cs.
++ Model/ResponseObj.cs.
++ Controllers/OrderBookController.cs.
++ Operations/OrderBookOperations.cs.
++ Util/HttpResponseUtil.cs.
 
 * Other files is for configuration of C# / .NET
 ### Contact
-LinkedIn: https://www.linkedin.com/in/reenan-campos/.
-Email: reenan.campos@gmail.com.
++ LinkedIn: https://www.linkedin.com/in/reenan-campos/.
++ Email: reenan.campos@gmail.com.
 
 
 
