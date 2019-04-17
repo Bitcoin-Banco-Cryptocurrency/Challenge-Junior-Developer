@@ -1,0 +1,14 @@
+C:\challenge\WebApi\bin\Debug\netcoreapp2.2\WebApi.deps.json
+C:\challenge\WebApi\bin\Debug\netcoreapp2.2\WebApi.runtimeconfig.json
+C:\challenge\WebApi\bin\Debug\netcoreapp2.2\WebApi.runtimeconfig.dev.json
+C:\challenge\WebApi\bin\Debug\netcoreapp2.2\WebApi.dll
+C:\challenge\WebApi\bin\Debug\netcoreapp2.2\WebApi.pdb
+C:\challenge\WebApi\obj\Debug\netcoreapp2.2\WebApi.csprojAssemblyReference.cache
+C:\challenge\WebApi\obj\Debug\netcoreapp2.2\WebApi.csproj.CoreCompileInputs.cache
+C:\challenge\WebApi\obj\Debug\netcoreapp2.2\WebApi.RazorAssemblyInfo.cache
+C:\challenge\WebApi\obj\Debug\netcoreapp2.2\WebApi.RazorAssemblyInfo.cs
+C:\challenge\WebApi\obj\Debug\netcoreapp2.2\WebApi.AssemblyInfoInputs.cache
+C:\challenge\WebApi\obj\Debug\netcoreapp2.2\WebApi.AssemblyInfo.cs
+C:\challenge\WebApi\obj\Debug\netcoreapp2.2\WebApi.RazorTargetAssemblyInfo.cache
+C:\challenge\WebApi\obj\Debug\netcoreapp2.2\WebApi.dll
+C:\challenge\WebApi\obj\Debug\netcoreapp2.2\WebApi.pdb

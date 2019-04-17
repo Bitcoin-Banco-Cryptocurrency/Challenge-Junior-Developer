@@ -1,29 +1,51 @@
-<p align="center">
-  <a href="https://www.btc-banco.com">
-      <img src="https://s3.amazonaws.com/assinaturas-de-emails/btc.png" alt="Grupo Bitcoin Banco"/>
-  </a>
-</p>
+# WebApi
+Challenge-Junior-Developer
 
-## Challenge for Developer
+#Definições do projeto
 
-A customer needs to search in our orderbook (available in this <a href="https://github.com/Bitcoin-Banco-Cryptocurrency/Challenge-OneDay/blob/master/OrderBook.json">JSON</a>) and he wants to buy offers below some price also sell offer offer to recieve some money.
-Based on this you will need to develop:
+Projeto desenvolvido em asp.net core + entityFramework
 
-- a simple API to search offers in the .json available;
-- it should be possible to search for offer by their amount (one or more);
-- it must be possible to order the result by price (asc and desc);
+Padrão utilizado Repository Pattern :
 
-The test should be done in Ruby, Go, Python or Node and we do like if you avoid frameworks. We expect at the end of the test, outside the API running, the following items:
+Para isolar as camadas de acesso(com isso fica mais fácil realizar o teste) e não duplicar a logica no código.
 
-- an explanation of what is needed to make your project work;
-- an explanation of how to perform the tests;
+#Armazenamento do objeto
 
-Remember that at the time of the evaluation we will look at:
+Neste projeto foi usado o SQL server como forma de armazenamento de dados, para realizar o teste é necessario uma string de conexão de uma base com uma tabela com o mesmo nome do DbSet indicado na classe OrderDbContext.cs linha 10
 
-- Code organization;
-- Object-Oriented Principles;
-- Maintenance;
+#Passo a passo para executar
 
-To send us your code, you must:
+1.Iniciando aplicação 
 
-Make a fork of this repository, and send us a pull-request.
+  dotnet run
+
+#Passo a passo para testar as requisições no Browser
+
+1.Pesquisar por todos os elementos
+https://localhost:5001/api/orders/Getall
+
+2.Pesquisar um ou mais elemento por Id:
+
+Obs: para requisitar mais de um id, é necessario colocar o caracter '+' entre os ids
+
+2.1 Somente 1 id
+
+Nesse caso foi pesquisado o id 1
+
+https://localhost:5001/api/orders/GetOrders/1 
+
+2.1 Multiplos ids
+
+No seguinte caso retorna os elementos com ids {1,2,5,6}
+
+https://localhost:5001/api/orders/GetOrders/1+2+5+6 
+
+3.Pesquisar por ordem de preço
+
+3.1 Ordem Decrescente
+
+https://localhost:5001/api/orders/Getalldesc
+
+3.2 Por Ordem Crescente
+
+https://localhost:5001/api/orders/Getallasc
