@@ -9,7 +9,7 @@ using WebApi.Repository;
 
 namespace WebApi.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
 
     public class OrdersController : Controller
     {
@@ -20,43 +20,32 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [ActionName("GetAll")]
         public IEnumerable<Order> GetAll()
         {
             return _orderRepository.GettAll();
         }
 
-        [HttpGet("{idList}", Name = "GetOrder")]
-        [ActionName("GetOrders")]
-        public IActionResult GetById(string idList)
+        [HttpGet("{parameter}", Name = "GetOrder")]
+        public IActionResult GetById(string parameter)
         {
-            String[] elements = idList.Split("+");
-            List<int> idListLong = new List<int>();
+            if (parameter == "asc")
+                return new ObjectResult(_orderRepository.GettAll().OrderBy(x => x.price));
+            else if (parameter == "desc")
+                return new ObjectResult(_orderRepository.GettAll().OrderByDescending(x => x.price));
+
+            String[] elements = parameter.Split(",");
+            List<int> idList = new List<int>();
 
             for (int i = 0; i < elements.Count(); i++)
             {
-                idListLong.Add(Int32.Parse(elements[i]));
+                idList.Add(Int32.Parse(elements[i]));
             }
 
-            var orders = _orderRepository.Find(idListLong);
+            var orders = _orderRepository.Find(idList);
             if (orders == null)
                 return NotFound();
 
             return new ObjectResult(orders);
-        }
-
-        [HttpGet]
-        [ActionName("GetAllDesc")]
-        public IEnumerable<Order> GetAllDesc()
-        {
-            return _orderRepository.GettAll().OrderByDescending(x => x.price);
-        }
-
-        [HttpGet]
-        [ActionName("GetAllAsc")]
-        public IEnumerable<Order> GetAllAsc()
-        {
-            return _orderRepository.GettAll().OrderBy(x => x.price);
         }
     }
 
